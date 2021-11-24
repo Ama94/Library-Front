@@ -1,0 +1,46 @@
+.App-header {
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+.App-nav {
+    background-color: #ac6730;
+}
+
+.App-nav > .nav-link {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-weight: bold;
+    height: 100%;
+    color: white !important;
+    font-size: 1.60rem;
+    text-align: center !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    border-left-width: 3px;
+    border-right-width: 0px;
+    border-style: solid;
+    border-image: linear-gradient(
+            to bottom,
+            black,
+            rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.App-navbar {
+    padding: 0px 0px !important;
+    width: 100%;
+}
+
+.last-link {
+    border-left-width: 0px;
+    border-right-width: 3px !important;
+    border-style: solid;
+    border-image: linear-gradient(
+            to bottom,
+            white,
+            rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
