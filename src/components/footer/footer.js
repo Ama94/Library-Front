@@ -15,7 +15,7 @@ class Footer extends React.Component {
                             <p>E-mail: <a href="mailto:biblioteka@PHP3.pl" className="footer-a">biblioteka@PHP3.pl</a></p>
                         </Col>
                         <Col className={"col-lg-2 mt-1"}>
-                            <a className="footer-a" aria-current="page" href="/main">Strona Główna></a><br/>
+                            <a className="footer-a" aria-current="page" href="/">Strona Główna></a><br/>
                             <a className="footer-a" href="Add">Dodaj></a><br/>
                             <a className="footer-a" href="overdue">Zaległości></a><br/>
                         </Col>

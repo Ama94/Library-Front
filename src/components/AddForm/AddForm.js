@@ -53,16 +53,6 @@ class AddForm extends React.Component {
                 </Row>
                 <Row  mt={4} mb={4}>
                     <Form.Group controlId="formBasicText">
-                        <Form.Control type="Number" placeholder="wypożyczone" name="borrowed" onChange={this.handleChange}/>
-                    </Form.Group>
-                </Row>
-                <Row  mt={4} mb={4}>
-                    <Form.Group controlId="formBasicText">
-                        <Form.Control type="Number" placeholder="id_użytkownika" name="userid" onChange={this.handleChange}/>
-                    </Form.Group>
-                </Row>
-                <Row  mt={4} mb={4}>
-                    <Form.Group controlId="formBasicText">
                         <Form.Control type="Text" placeholder="URL Okładki" name="coverurl" onChange={this.handleChange}/>
                     </Form.Group>
                 </Row>

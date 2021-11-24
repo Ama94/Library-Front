@@ -3,6 +3,7 @@ import KImage from './Ksiazka1.png';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Card, Button, Row, Col, Image} from "react-bootstrap";
 import React from "react";
+import {getToken} from "../../Utils/Common";
 
 class KCard extends React.Component {
 
@@ -15,6 +16,13 @@ class KCard extends React.Component {
 
         fetch('http://127.0.0.1:8000/api/book/borrow/' + id, {
             method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Origin': '',
+                'Host': 'api.producthunt.com',
+                'Authorization': 'Bearer ' + getToken()
+            },
             // We convert the React state to JSON and send it as the POST body
         }).then(function(response) {
             console.log(response)

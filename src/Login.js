@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 async function loginUser(credentials) {
-    return fetch('https://api.jzie2018.s.zs1.stargard.pl/public/authentication_token', {
+    return fetch('http://127.0.0.1:8000/authentication_token', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -3,6 +3,17 @@ import React from "react";
 import Table from 'react-bootstrap/Table'
 
 class OverdueTable extends React.Component{
+
+    test(props){
+        if  ({props} == 1){
+           return <td style={{color: "red"}}>Tak</td>
+        } else {
+           return <td style={{color: "lightgreen"}}>Nie</td>
+        }
+    }
+
+
+
     render() {
         return (
             <Table variant={"dark"}>
@@ -12,25 +23,16 @@ class OverdueTable extends React.Component{
                     <th>Tytuł Książki</th>
                     <th>Autor</th>
                     <th>Data Wypożyczenia</th>
+                    <th>Zaległe?</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Władca Pierścieni</td>
-                    <td>J.R.R Tolkien</td>
-                    <td>12.10.2021</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td>{this.props.id}</td>
+                    <td>{this.props.title}</td>
+                    <td>{this.props.author}</td>
+                    <td>{this.props._borrow_date}</td>
+                    {this.props.borrowed == 0? <td style={{color: 'red'}}>Tak</td>:<td style={{color: 'lightgreen'}}>Nie</td>  }
                 </tr>
                 </tbody>
             </Table>
