@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import './Login.css';
+
 async function loginUser(credentials) {
     return fetch('http://127.0.0.1:8000/authentication_token', {
         method: 'POST',
@@ -30,7 +32,7 @@ export default function Login({ setToken }) {
             <h1>Please Log In</h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <p>Username</p>
+                    <p>Email</p>
                     <input type="text" onChange={e => setEmail(e.target.value)}/>
                 </label>
                 <label>

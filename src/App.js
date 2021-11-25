@@ -8,19 +8,12 @@ import Footer from "./components/footer/footer";
 import Overdue from "./container/Overdue/overdue";
 import Add from "./container/Add/Add";
 import Main from "./container/Main/Main";
+import useToken from './useToken';
 
-function setToken(userToken) {
-    sessionStorage.setItem('token', JSON.stringify(userToken));
-}
-
-function getToken() {
-    const tokenString = sessionStorage.getItem('token');
-    const userToken = JSON.parse(tokenString);
-    return userToken?.token
-}
 
 function App() {
-    const token = getToken();
+
+    const { token, setToken } = useToken();
 
     if(!token) {
         return <Login setToken={setToken} />
@@ -33,7 +26,7 @@ function App() {
                     <div className="content">
                         <Header></Header>
                         <Routes>
-                            <Route exact path='/' element={<Main/>}/>
+                            <Route exact path='/' element={<Main token={token}/>}/>
                             {/*<Route exact path='/login' element={<Login/> }/>*/}
                             <Route path={'/Overdue'} element={<Overdue/>}/>
                             <Route path={'/Add'} element={<Add/>}/>

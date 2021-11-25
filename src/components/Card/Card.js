@@ -11,6 +11,7 @@ class KCard extends React.Component {
         super(props);
     }
 
+
     handleSubmit=id => (event) => {
         alert('A form was submitted: ' + this.state);
 
@@ -25,6 +26,7 @@ class KCard extends React.Component {
             },
             // We convert the React state to JSON and send it as the POST body
         }).then(function(response) {
+
             console.log(response)
             return response.json();
         });

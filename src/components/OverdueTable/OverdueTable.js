@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import React from "react";
 import Table from 'react-bootstrap/Table'
+import ReturnButton from "../returnButton/ReturnButton";
 
 class OverdueTable extends React.Component{
 
@@ -32,7 +33,7 @@ class OverdueTable extends React.Component{
                     <td>{this.props.title}</td>
                     <td>{this.props.author}</td>
                     <td>{this.props._borrow_date}</td>
-                    {this.props.borrowed == 0? <td style={{color: 'red'}}>Tak</td>:<td style={{color: 'lightgreen'}}>Nie</td>  }
+                    {this.props.borrowed == 1? <td style={{color: 'red'}}>Tak <ReturnButton id={this.props.id}/></td>:<td style={{color: 'lightgreen'}}>Nie</td>  }
                 </tr>
                 </tbody>
             </Table>

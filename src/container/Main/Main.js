@@ -58,13 +58,14 @@ class Main extends React.Component {
                 <Container className={"justify-content-center"} mt={2} mb={2}>
                     <Row className="justify-content-md-center" md={4} mt={8} mb={8}>
                             {items.map(item => (
+                                item.borrowed == 0?
                                     <Card
                                         id={item.id}
                                         coverurl={item.coverurl}
                                         title={item.title}
                                         author={item.author}
                                         description={item.description}
-                                    ></Card>
+                                    ></Card>:null
                             ))}
                     </Row>
                 </Container>
